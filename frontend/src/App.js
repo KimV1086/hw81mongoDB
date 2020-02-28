@@ -1,12 +1,17 @@
-import React from 'react';
-import './App.css';
+import React, {Component} from 'react';
+import {Switch, Route} from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
+import ShortLink from "./components/ShortLink/ShortLink";
 
-    </div>
-  );
+
+class App extends Component {
+  render() {
+    return (
+      <Switch>
+        <Route path="/" exact component={ShortLink}/>
+      </Switch>
+    );
+  }
 }
 
 export default App;
